@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>동아리 가입 신청서</title>
+<style type="text/css">
+	var dong = document.getElementById("dong");
+	var part = document.getelementById("part");
+	
+	if(dong.value == band){
+		visible();
+	}
+	
+	function visible(){
+		part.style.visibility="visible";
+	}
+</style>
+</head>
+<body>
+	<h2>동아리 가입 신청서</h2>
+	<form action="insert4.jsp">
+	이름 :	<input type="text" name="name"><br>
+	
+	거주지 :	<input type="text" name="resi"><br>
+	
+	희망 동아리 :	<select name="dong" id = "dong">
+					<option value="band">밴드동아리</option>
+					<option value="read">독서동아리</option>
+					<option value="movie">영화감상동아리</option>
+					<option value="science">과학동아리</option>
+					<option value="game">게임동아리</option>
+				</select><br>
+	
+	희망 시간 :	<input type="radio" value="joomal" name="week">주말
+			<input type="radio" value="joojoong" name="week">주중<br>
+	
+	연락처 : 	<select name="com">
+				<option value="011">011</option>
+				<option value="010">010</option>
+				<option value="017">017</option>
+				<option value="019">019</option>
+			</select>&nbsp;<input type="number" name="tel"><br>
+	
+	관심사 :	<input type="checkbox" value="culture" name="hobby">문화
+			<input type="checkbox" value="art" name="hobby">예술
+			<input type="checkbox" value="sports" name="hobby">스포츠
+			<br>
+			<input type="checkbox" value="entertainment" name="hobby">엔터테인먼트
+			<input type="checkbox" value="music" name="hobby">음악
+			<input type="checkbox" value="book" name="hobby">서적
+			<br>
+			<br>
+			<input type="submit" value="가입신청">
+			
+	희망파트 :	<div id="part" style="visibility:hidden;">
+				<input type="checkbox" value="vocal" name="hobby">보컬
+				<input type="checkbox" value="guitar" name="hobby">기타
+				<input type="checkbox" value="bass" name="hobby">베이스
+				<input type="checkbox" value="drum" name="hobby">드럼
+				<input type="checkbox" value="keyboard" name="hobby">키보드
+			</div>
+	</form>
+</body>
+</html>
